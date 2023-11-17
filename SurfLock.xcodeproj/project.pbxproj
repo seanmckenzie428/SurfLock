@@ -14,7 +14,7 @@
 		D401B1F02B06A08900CE60B1 /* SurfLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B1EF2B06A08900CE60B1 /* SurfLockTests.swift */; };
 		D401B1FA2B06A08900CE60B1 /* SurfLockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B1F92B06A08900CE60B1 /* SurfLockUITests.swift */; };
 		D401B1FC2B06A08900CE60B1 /* SurfLockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B1FB2B06A08900CE60B1 /* SurfLockUITestsLaunchTests.swift */; };
-		D401B20B2B06C71800CE60B1 /* ContentView_PrieviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B20A2B06C71800CE60B1 /* ContentView_PrieviewData.swift */; };
+		D401B20B2B06C71800CE60B1 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B20A2B06C71800CE60B1 /* PreviewData.swift */; };
 		D4F18F022B06E3F6006B6B9E /* DomainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F18F012B06E3F6006B6B9E /* DomainManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		D401B1FB2B06A08900CE60B1 /* SurfLockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfLockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D401B2082B06A42100CE60B1 /* SurfLock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SurfLock.entitlements; sourceTree = "<group>"; };
 		D401B2092B06A49000CE60B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D401B20A2B06C71800CE60B1 /* ContentView_PrieviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_PrieviewData.swift; sourceTree = "<group>"; };
+		D401B20A2B06C71800CE60B1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		D4F18F012B06E3F6006B6B9E /* DomainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				D401B1E52B06A08900CE60B1 /* Preview Assets.xcassets */,
-				D401B20A2B06C71800CE60B1 /* ContentView_PrieviewData.swift */,
+				D401B20A2B06C71800CE60B1 /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 				D401B1E12B06A08800CE60B1 /* ContentView.swift in Sources */,
 				D4F18F022B06E3F6006B6B9E /* DomainManager.swift in Sources */,
 				D401B1DF2B06A08800CE60B1 /* SurfLockApp.swift in Sources */,
-				D401B20B2B06C71800CE60B1 /* ContentView_PrieviewData.swift in Sources */,
+				D401B20B2B06C71800CE60B1 /* PreviewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
