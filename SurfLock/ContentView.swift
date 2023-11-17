@@ -26,7 +26,7 @@ struct ContentView: View {
             Form {
                 if (domainManager.deletingDomain != nil) {
                     Section {
-                        DeleteDomainView(domainManager: domainManager, timeToWait: 6000)
+                        DeleteDomainView(domainManager: domainManager, timeToWait: 600)
                     }
                 }
                 

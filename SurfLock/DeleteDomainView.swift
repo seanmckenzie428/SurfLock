@@ -37,7 +37,10 @@ struct DeleteDomainView: View {
             Text("Remember, you blocked ").bold() +
             Text(domainString).foregroundStyle(.red) +
             Text(" for a reason!!! ").bold() +
-            Text("Are you sure you want to unblock it now?")
+            Text("Think about why you blocked it in the first place and the real reason why you want to unblock it now.")
+            Text("Are you still sure you want to unblock ") +
+            Text(domainString).foregroundStyle(.red) +
+            Text(" ?")
         }
         if ( timerStarted && !timerFinished) { // Timer is running
             Text("To make sure this is something you really want you will need to wait for \(timeRemaining) before you can remove it.")
