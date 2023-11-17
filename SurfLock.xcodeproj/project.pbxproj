@@ -16,6 +16,7 @@
 		D401B1FC2B06A08900CE60B1 /* SurfLockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B1FB2B06A08900CE60B1 /* SurfLockUITestsLaunchTests.swift */; };
 		D401B20B2B06C71800CE60B1 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B20A2B06C71800CE60B1 /* PreviewData.swift */; };
 		D4F18F022B06E3F6006B6B9E /* DomainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F18F012B06E3F6006B6B9E /* DomainManager.swift */; };
+		D4F18F042B06F17F006B6B9E /* DeleteDomainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F18F032B06F17F006B6B9E /* DeleteDomainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		D401B2092B06A49000CE60B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D401B20A2B06C71800CE60B1 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		D4F18F012B06E3F6006B6B9E /* DomainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainManager.swift; sourceTree = "<group>"; };
+		D4F18F032B06F17F006B6B9E /* DeleteDomainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDomainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				D401B2082B06A42100CE60B1 /* SurfLock.entitlements */,
 				D401B1DE2B06A08800CE60B1 /* SurfLockApp.swift */,
 				D401B1E02B06A08800CE60B1 /* ContentView.swift */,
+				D4F18F032B06F17F006B6B9E /* DeleteDomainView.swift */,
 				D4F18F012B06E3F6006B6B9E /* DomainManager.swift */,
 				D401B1E22B06A08900CE60B1 /* Assets.xcassets */,
 				D401B1E42B06A08900CE60B1 /* Preview Content */,
@@ -271,6 +274,7 @@
 				D4F18F022B06E3F6006B6B9E /* DomainManager.swift in Sources */,
 				D401B1DF2B06A08800CE60B1 /* SurfLockApp.swift in Sources */,
 				D401B20B2B06C71800CE60B1 /* PreviewData.swift in Sources */,
+				D4F18F042B06F17F006B6B9E /* DeleteDomainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

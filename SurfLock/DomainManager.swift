@@ -13,6 +13,7 @@ class DomainManager: ObservableObject {
     @Published var settingsStore = ManagedSettingsStore.init();
     @Published var domains: Set<WebDomain> = []
     @Published var isLoading = false;
+    @Published var deletingDomain: WebDomain?
     
     func getDomainSetFromFilter(filter: WebContentSettings.FilterPolicy?) -> Set<WebDomain> {
         var domainSetFromAuto: Set<WebDomain> = []
@@ -47,8 +48,18 @@ class DomainManager: ObservableObject {
         setBlockedDomains(domainsToBlock: domains)
     }
     
-    func unblockDomain(domain: WebDomain) {
-        domains.remove(domain)
+    func startUnblockDomain(domain: WebDomain) {
+        deletingDomain = domain
+    }
+    
+    func cancelUnblockDomain() {
+        deletingDomain = nil
+    }
+    
+    func finishUnblockDomain() {
+        guard deletingDomain != nil else { return }
+        domains.remove(deletingDomain!)
         setBlockedDomains(domainsToBlock: domains)
+        deletingDomain = nil
     }
 }

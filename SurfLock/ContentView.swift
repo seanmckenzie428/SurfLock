@@ -24,6 +24,12 @@ struct ContentView: View {
                 .padding(.bottom)
             
             Form {
+                if (domainManager.deletingDomain != nil) {
+                    Section {
+                        DeleteDomainView(domainManager: domainManager, timeToWait: 6000)
+                    }
+                }
+                
                 Section(header: Text("Block a domain")) {
                     TextField("Enter domain to block", text: $newDomain)
                     
@@ -67,7 +73,6 @@ struct BlockedDomainsView: View {
                     Text(domain.domain ?? "Error with domain: \(domain)")
                 }
                 .onDelete(perform: { indexSet in
-                    
                     var domains = Array(domainmanager.domains).sorted(by: {$0.hashValue < $1.hashValue})
                     let domain = domains.remove(at: indexSet.first!)
                     guard domain.domain != nil else {
@@ -76,21 +81,11 @@ struct BlockedDomainsView: View {
                     }
                     let webDomain = WebDomain(domain: domain.domain!);
                     print(webDomain)
-                    domainmanager.unblockDomain(domain: webDomain)
+                    domainmanager.startUnblockDomain(domain: webDomain)
                 })
             }
             .navigationTitle("Blocked Domains")
         }
-    }
-}
-
-struct GradientButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .foregroundColor(.white)
-            .padding()
-            .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .leading, endPoint: .trailing))
-            .cornerRadius(10)
     }
 }
 
