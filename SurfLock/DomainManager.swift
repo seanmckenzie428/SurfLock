@@ -12,6 +12,7 @@ class DomainManager: ObservableObject {
     
     @Published var settingsStore = ManagedSettingsStore.init();
     @Published var domains: Set<WebDomain> = []
+    @Published var isLoading = false;
     
     func getDomainSetFromFilter(filter: WebContentSettings.FilterPolicy?) -> Set<WebDomain> {
         var domainSetFromAuto: Set<WebDomain> = []
@@ -28,7 +29,9 @@ class DomainManager: ObservableObject {
     }
     
     func syncDomains() {
+        isLoading = true;
         domains = getDomainSetFromFilter(filter: settingsStore.webContent.blockedByFilter)
+        isLoading = false;
     }
     
     func setBlockedDomains(domainsToBlock: Set<WebDomain>) {

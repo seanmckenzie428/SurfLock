@@ -59,24 +59,28 @@ struct BlockedDomainsView: View {
     @ObservedObject var domainmanager: DomainManager
     
     var body: some View {
-        List {
-            ForEach(Array(domainmanager.domains).sorted(by: {$0.hashValue < $1.hashValue}), id: \.hashValue) { domain in
-                Text(domain.domain ?? "Error with domain: \(domain)")
-            }
-            .onDelete(perform: { indexSet in
-                
-                var domains = Array(domainmanager.domains).sorted(by: {$0.hashValue < $1.hashValue})
-                let domain = domains.remove(at: indexSet.first!)
-                guard domain.domain != nil else {
-                    print("DOMAIN WAS EMPTY")
-                    return
+        if (domainmanager.isLoading) {
+            ProgressView()
+        } else {
+            List {
+                ForEach(Array(domainmanager.domains).sorted(by: {$0.hashValue < $1.hashValue}), id: \.hashValue) { domain in
+                    Text(domain.domain ?? "Error with domain: \(domain)")
                 }
-                let webDomain = WebDomain(domain: domain.domain!);
-                print(webDomain)
-                domainmanager.unblockDomain(domain: webDomain)
-            })
+                .onDelete(perform: { indexSet in
+                    
+                    var domains = Array(domainmanager.domains).sorted(by: {$0.hashValue < $1.hashValue})
+                    let domain = domains.remove(at: indexSet.first!)
+                    guard domain.domain != nil else {
+                        print("DOMAIN WAS EMPTY")
+                        return
+                    }
+                    let webDomain = WebDomain(domain: domain.domain!);
+                    print(webDomain)
+                    domainmanager.unblockDomain(domain: webDomain)
+                })
+            }
+            .navigationTitle("Blocked Domains")
         }
-        .navigationTitle("Blocked Domains")
     }
 }
 
