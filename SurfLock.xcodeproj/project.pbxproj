@@ -14,6 +14,8 @@
 		D401B1F02B06A08900CE60B1 /* SurfLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B1EF2B06A08900CE60B1 /* SurfLockTests.swift */; };
 		D401B1FA2B06A08900CE60B1 /* SurfLockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B1F92B06A08900CE60B1 /* SurfLockUITests.swift */; };
 		D401B1FC2B06A08900CE60B1 /* SurfLockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B1FB2B06A08900CE60B1 /* SurfLockUITestsLaunchTests.swift */; };
+		D401B20B2B06C71800CE60B1 /* ContentView_PrieviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401B20A2B06C71800CE60B1 /* ContentView_PrieviewData.swift */; };
+		D4F18F022B06E3F6006B6B9E /* DomainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F18F012B06E3F6006B6B9E /* DomainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		D401B1F52B06A08900CE60B1 /* SurfLockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfLockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D401B1F92B06A08900CE60B1 /* SurfLockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfLockUITests.swift; sourceTree = "<group>"; };
 		D401B1FB2B06A08900CE60B1 /* SurfLockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfLockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D401B2082B06A42100CE60B1 /* SurfLock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SurfLock.entitlements; sourceTree = "<group>"; };
+		D401B2092B06A49000CE60B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D401B20A2B06C71800CE60B1 /* ContentView_PrieviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_PrieviewData.swift; sourceTree = "<group>"; };
+		D4F18F012B06E3F6006B6B9E /* DomainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,11 @@
 		D401B1DD2B06A08800CE60B1 /* SurfLock */ = {
 			isa = PBXGroup;
 			children = (
+				D401B2092B06A49000CE60B1 /* Info.plist */,
+				D401B2082B06A42100CE60B1 /* SurfLock.entitlements */,
 				D401B1DE2B06A08800CE60B1 /* SurfLockApp.swift */,
 				D401B1E02B06A08800CE60B1 /* ContentView.swift */,
+				D4F18F012B06E3F6006B6B9E /* DomainManager.swift */,
 				D401B1E22B06A08900CE60B1 /* Assets.xcassets */,
 				D401B1E42B06A08900CE60B1 /* Preview Content */,
 			);
@@ -106,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				D401B1E52B06A08900CE60B1 /* Preview Assets.xcassets */,
+				D401B20A2B06C71800CE60B1 /* ContentView_PrieviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -258,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D401B1E12B06A08800CE60B1 /* ContentView.swift in Sources */,
+				D4F18F022B06E3F6006B6B9E /* DomainManager.swift in Sources */,
 				D401B1DF2B06A08800CE60B1 /* SurfLockApp.swift in Sources */,
+				D401B20B2B06C71800CE60B1 /* ContentView_PrieviewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +431,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SurfLock/SurfLock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SurfLock/Preview Content\"";
 				DEVELOPMENT_TEAM = X769NMRNS5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SurfLock/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Surf Lock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,12 +463,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SurfLock/SurfLock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SurfLock/Preview Content\"";
 				DEVELOPMENT_TEAM = X769NMRNS5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SurfLock/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Surf Lock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
