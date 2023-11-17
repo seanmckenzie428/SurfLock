@@ -23,25 +23,30 @@ struct ContentView: View {
                 .foregroundColor(.blue)
                 .padding(.bottom)
             
-            Form {
-                if (domainManager.deletingDomain != nil) {
-                    Section {
-                        DeleteDomainView(domainManager: domainManager, timeToWait: 600)
+            if (center.authorizationStatus == .approved) {
+                Form {
+                    if (domainManager.deletingDomain != nil) {
+                        Section {
+                            DeleteDomainView(domainManager: domainManager, timeToWait: 600)
+                        }
+                    }
+                    
+                    Section(header: Text("Block a domain")) {
+                        TextField("Enter domain to block", text: $newDomain)
+                        
+                        Button("Submit", action: {
+                            domainManager.blockDomain(domain: WebDomain(domain: newDomain))
+                            newDomain.removeAll()
+                        })
+                    }
+                    
+                    Section(header: Text("Blocked Domains")) {
+                        BlockedDomainsView(domainmanager: domainManager)
                     }
                 }
-                
-                Section(header: Text("Block a domain")) {
-                    TextField("Enter domain to block", text: $newDomain)
-                    
-                    Button("Submit", action: {
-                        domainManager.blockDomain(domain: WebDomain(domain: newDomain))
-                        newDomain.removeAll()
-                    })
-                }
-                
-                Section(header: Text("Blocked Domains")) {
-                    BlockedDomainsView(domainmanager: domainManager)
-                }
+            } else {
+                Text("This app requires access to Screen Time permissions to function.")
+                    .font(.headline)
             }
         }
         .padding()
